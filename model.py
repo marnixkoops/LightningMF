@@ -125,6 +125,7 @@ def main() -> None:
     train_set, val_set = torch.utils.data.random_split(
         dataset, [int(len(dataset) * (1 - val_ratio)), int(len(dataset) * val_ratio)]
     )
+    
     train_dataloader = torch.utils.data.DataLoader(
         train_set,
         batch_size=args.batch_size,
